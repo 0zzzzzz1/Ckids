@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ckids</title>
+    <!-- icon -->
+    <link rel="icon" href="./icon/ckidsiconA.ico" type="image/x-icon">
+    <!-- css -->
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    
+</head>
+<body>
+    <!-- go top -->
+    <div class="topBtn" id="goTop"><a href=#goTop></a></div>
+    
+    <!-- 會員註冊 -->
+    <div class="register">
+        <form action="https://webdevlab2.000webhostapp.com/echo.php" method="post" target="_blank">
+
+        <div class="registerBlock">
+            <div class="registerTitle">
+                <div class="registerText">Sign In</div>
+                <div class="registerText">Sign Up</div>
+                <div class="registerClose"></div>
+            </div>
+            <div class="registerContent">
+                <input class="registerInput" type="email" name="userRegisterEmail" placeholder="請輸入有效信箱" required minlength="15" >
+                <input class="registerInput" type="password" name="userRegisterPassword" placeholder="請輸入密碼" required minlength="6" maxlength="12">
+                <input class="registerInput" type="password" name="userRegisterPasswordCheck" placeholder="再次輸入密碼" required minlength="6" maxlength="12">
+                <div class="registerInput">
+                    <input type="checkbox" name="userRegisterCheck" value="yes" id="userCheck"><label for="userCheck" required>我已詳閱且同意會員條款</label>
+                </div>
+                <button class="registerInput" type="submit" value="visited" name="signUpBtn">Sign Up</button>
+            </div>
+        </div>
+
+        </form>
+    </div>
+    <!-- 會員登入 -->
+    <div class="signin">
+        <form action="https://webdevlab2.000webhostapp.com/echo.php" method="post" target="_blank">
+
+        <div class="signinBlock">
+            <div class="signinTitle">
+                <div class="signinText">Sign In</div>
+                <div class="signinText">Sign Up</div>
+                <div class="signinClose"></div>
+            </div>
+            <div class="signinContent">
+                <input class="signinInput" type="email" name="userSigninEmail" placeholder="請輸入有效信箱" required minlength="15" >
+                <input class="signinInput" type="password" name="userSigninPassword" placeholder="請輸入密碼" required minlength="6" maxlength="12">
+                <button class="signinInput" type="submit"  value="visited" name="signInBtn">Sign In</button>
+                
+            </div>
+        </div>
+        
+        </form>
+    </div>
+
+    <!-- navbar -->
+    <div class="navbar">
+        <!-- logo -->
+        <div class="navbarL">
+            <div class="navbarLogo"><a href="./home.html">Ckids</a>
+                </div>
+        </div>
+        <!-- 選單 -->
+        <div class="navbarR">
+            <div class="navbarText"><a href="./about.html">About關於</a></div>
+            <div class="navbarText"><a href="./artical.html">Artical文章</a></div>
+            <div class="navbarText"><a href="">Announcement公告</a></div>
+            <div class="navbarText"><a href="">Activity活動</a></div>
+            <div class="navbarText"><a href="#contact">Contact聯絡</a></div>
+            <div class="search">
+                <input type="text" id="searchText" required>
+            </div>
+            <div class="navbarImg"></div>
+            <div class="navbarSave"></div> 
+        
+        </div>
+    </div>
+    
+
+    <div class="content">
+        <!-- 1. 關於 about -->
+        <div class="about">
+            <div class="aboutText">Game is the only teaching feature <br>of children's courses in Ckids.</div>
+            <div class="aboutEnter"><a href="./about.html"><button>About Ckids</button></a></div>
+        </div>
+        
+        <!-- 2. 輪播 carousel -->
+        <!--    形象 banner -->
+        <div class="carousel">
+            <div class="carouselI">
+                <div class="carouselImg" id="imgOne"></div>
+                <div class="carouselImg" id="imgTwo"></div>
+                <div class="carouselImg" id="imgThree"></div>
+            </div>
+            <div class="carouselcontrol">
+                <div class="carouselL">
+                    <div class="imgText" id="textOne">分享｜日本TESORO以「自由玩耍」為概念的幼兒園設計！</div>
+                    <div class="imgText" id="textTwo">分享｜以「自由玩耍」為概念的幼兒園設計！</div>
+                    <div class="imgText" id="textThree">分享｜日本TESORO的幼兒園設計！</div>
+                </div>
+                <div class="carouselR">
+                    <div class="leftControl"></div>
+                    <div class="imgNum imgNumOne">1|3</div>
+                    <div class="imgNum imgNumTwo">2|3</div>
+                    <div class="imgNum imgNumThree">3|3</div>
+                    <div class="rightControl"></div>
+                </div>  
+            </div>
+            
+        </div>
+
+        <!-- 3. 公告 announcement -->
+        <div class="announcement">
+            <div class="announcementText">Christmas event is coming, come to Ckids on 12/24 to have fun with us!</div>
+            <div class="announcementEnter"><button>More</button></div>
+        </div>
+
+        <!-- 4. 活動 activity -->
+        <div class="titleText">
+            <div>Activity</div>
+        </div>
+        <div class="activity">
+            <!-- <div class="activityTitle">Activity</div> -->
+            <!-- 東湖 -->
+            <div class="activityA aOne">
+                <div class="activityAlbum" id="albumOne"></div>
+                <div class="activityText" id="textAlbumD">
+                    <div>
+                        <div class="textActivity">Donghu</div>
+                        <div class="textActivityLine lineOne"></div>
+                    </div>
+                    <div class="activityBtn activitybtnOne">Enter</div>
+                </div>
+            </div>
+            <!-- 永和 -->
+            <div class="activityA aTwo">
+                <div class="activityAlbum" id="albumTwo"></div>
+                <div class="activityText" id="textAlbumY">
+                    <div>
+                        <div class="textActivity">Yonghe</div>
+                        <div class="textActivityLine lineTwo"></div>
+                    </div>
+                    <div class="activityBtn activitybtnTwo">Enter</div>
+                </div>
+            </div>
+            <!-- 內湖 -->
+            <div class="activityA aThree">
+                <div class="activityAlbum" id="albumThree"></div>
+                <div class="activityText" id="textAlbumN">
+                    <div>
+                        <div class="textActivity">Neihu</div>
+                        <div class="textActivityLine lineThree"></div>
+                    </div>
+                    <div class="activityBtn activitybtnThree">Enter</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 5. 文章  -->
+        <div class="titleText">
+            <div>Artical</div>
+        </div>
+        <div class="artical">
+            
+            <!-- 1 -->
+            <div class="articalDiv articalDivOne">
+                <div class="articalDivL">
+                    <div class="articalImg articalOne"></div>
+                </div>
+                <div class="articalDivM ">
+                    <div class="articalTitle">Imagination Blocks Miller Goodman from UK</div>
+                    <!-- 畫線 -->
+                    <div class="articalLine artilineOne"></div>
+                    <div class="articalContent">Building blocks can also be a good helper for cultivating children's aesthetic sense! Integrate design elements and use non-toxic wood to print high-saturation "primary color geometric shapes" to stimulate children's feelings of color and shape through these graphics.</div>
+                </div>
+                <div class="articalDivR">
+                    <div class="articalSave saveOne"></div>
+                    <div class="articalBtn"><a href="./articalPage.html">More</a></div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="articalDiv articalDivTwo">
+                <div class="articalDivL">
+                    <div class="articalImg articalTwo"></div>
+                </div>
+                <div class="articalDivM ">
+                    <div class="articalTitle">What is the beauty of a child?</div>
+                    <!-- 畫線 -->
+                    <div class="articalLine artilineTwo"></div>
+                    <div class="articalContent">According to Smith, a professor at the Department of Cultural and Educational Policy at the University of Illinois, aesthetic education is defined as: "Although aesthetics may have different cognitive, moral, and social functions, the primary purpose of aesthetic education is to promote aesthetic experience. There are qualities to enjoy and cherish.”</div>
+                </div>
+                <div class="articalDivR">
+                    <div class="articalSave saveTwo"></div>
+                    <div class="articalBtn"><a href="./articalPage.html">More</a></div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="articalDiv articalDivThree">
+                <div class="articalDivL">
+                    <div class="articalImg articalThree"></div>
+                </div>
+                <div class="articalDivM ">
+                    <div class="articalTitle">What is Lorem Ipsum?</div>
+                    <!-- 畫線 -->
+                    <div class="articalLine artilineThree"></div>
+                    <div class="articalContent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                </div>
+                <div class="articalDivR">
+                    <div class="articalSave saveThree"></div>
+                    <div class="articalBtn"><a href="./articalPage.html">More</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 聯絡 contact -->
+        <div class="titleText">
+            <div>Contact</div>
+        </div>
+        <div class="contact" id="contact">
+            
+            <div class="contactSchool">
+                <!-- 東湖 -->
+                <iframe id="mapD" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57822.70479183501!2d121.53821885820311!3d25.070732699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442acbd1dc96fd3%3A0x1d1cbc866bd66fa7!2zQ2tpZHPmnbHmuZbmoKHljYA!5e0!3m2!1szh-TW!2stw!4v1668136504528!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- 永和 -->
+                <iframe id="mapY" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57855.85721220484!2d121.44782975820308!3d25.000419199999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9e6cda10285%3A0x4f134b96bba4b0d8!2z5paw5YyX5biC56eB56uL5YKz5YuV5omY5YWS5omA!5e0!3m2!1szh-TW!2stw!4v1668136230656!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- 內湖 -->
+                <iframe id="mapN" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57822.70479183501!2d121.53821885820311!3d25.070732699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442acbca1f60003%3A0xcbe8e6fb1eddedd9!2zQ2tpZHPlgrPli5XlubzlhZLlnJLmnbHmuZbliIbmoKE!5e0!3m2!1szh-TW!2stw!4v1668136526394!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- 按鈕 -->
+            <div class="contactBtn">
+                <button id="btnD">Donghu</button>
+                <button id="btnY">Yonghe</button>
+                <button id="btnN">Neihu</button>
+            </div>
+            <!-- 東湖 內容 -->
+            <div class="contactT" id="textD">
+                
+                <div class="contactText">
+                    <div class="textTitle">PHONE</div>
+                    <div class="textContent">02 26307608</div>
+                </div>
+                <div class="contactText" >
+                    <div class="textTitle">SERVICE</div>
+                    <div class="textContent">7:30-19:00</div>
+                </div>
+                <div class="contactText">
+                    <div class="textTitle">ADDRESS</div>
+                    <div class="textContent">台北市內湖區民權東路六段296巷60號</div>
+                </div>
+            </div>
+            <!-- 永和 內容 -->
+            <div class="contactT" id="textY">
+                
+                <div class="contactText">
+                    <div class="textTitle">PHONE</div>
+                    <div class="textContent">02 89231566</div>
+                </div>
+                <div class="contactText">
+                    <div class="textTitle">SERVICE</div>
+                    <div class="textContent">7:30-19:00</div>
+                </div>
+                <div class="contactText">
+                    <div class="textTitle">ADDRESS</div>
+                    <div class="textContent">新北市永和區中正路344號</div>
+                </div>
+            </div>
+            <!-- 內湖 內容 -->
+            <div class="contactT" id="textN">
+                
+                <div class="contactText">
+                    <div class="textTitle">PHONE</div>
+                    <div class="textContent">02 26333054</div>
+                </div>
+                <div class="contactText">
+                    <div class="textTitle">SERVICE</div>
+                    <div class="textContent">7:30-19:00</div>
+                </div>
+                <div class="contactText">
+                    <div class="textTitle">ADDRESS</div>
+                    <div class="textContent">台北市內湖區康寧路三段70巷16號號</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+
+        <!-- <div class="footerM">
+
+            <div class="footerMnav">
+                <div class="footerTitle"><a href="./about.html">About</a></div>
+                <div class="footerTitle "><a href="./artical.html">Artical</a></div>
+                <div class="footerTitle"><a href="">Announcement</a></div>
+                <div class="footerTitle"><a href="">Activity</a></div>
+                <div class="footerTitle"><a href="">Contact</a></div>
+                
+            </div>
+            <div class="footerMnav">
+                <div class="footerText"><a href="./about.html">Ckids</a></div>
+                <div class="footerText"><a href=""></a></div>
+                <div class="footerText"><a href=""></a></div>
+                <div class="footerText"><a href="">Donghu</a></div>
+                <div class="footerText"><a href="">Donghu</a></div>
+            </div>
+            <div class="footerMnav">
+                <div class="footerText"><a href="">Teacher</a></div>
+                <div class="footerText"><a href=""></a></div>
+                <div class="footerText"><a href=""></a></div>
+                <div class="footerText"><a href="">Yonghe</a></div>
+                <div class="footerText"><a href="">Yonghe</a></div>
+            </div>
+            <div class="footerMnav">
+                <div class="footerText"><a href="">Admission</a></div>
+                <div class="footerText"><a href=""></a></div>
+                <div class="footerText"><a href=""></a></div>
+                <div class="footerText"><a href="">Neihu</a></div>
+                <div class="footerText"><a href="">Neihu</a></div>
+            </div>
+            
+        </div> -->
+
+        <div class="footerB">
+            <div class="footerBL">Copyright © 2022 Lin.STUDIO Inc.</div>
+            <div class="footerBR">Taiwan</div>
+        </div>
+    </div>
+    
+
+
+    
+    <script src="./home.js"></script>
+</body>
+</html>

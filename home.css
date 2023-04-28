@@ -1,0 +1,1215 @@
+
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+body{
+    margin: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* 會員註冊 */
+.register{
+    position: fixed;
+    z-index: 999;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,.8);
+    display: none;
+}
+.registerBlock{
+    position: absolute;
+    top:10vh;
+    left: 35vw;
+    width: 30vw;
+    height: 80vh;
+    background-color: white;
+    border: 1px solid rgba(30,30,30);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+/* 標題 */
+.registerTitle{
+    width: 100%;
+    height: 15%;
+    /* background-color: rgb(0, 255, 255); */
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(30,30,30);
+    padding-left: 10%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.registerText{
+    height: 30%;
+    /* background-color: aquamarine; */
+    letter-spacing: 2%;
+    font-family:'Poppins',  'Noto Sans TC', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    flex-flow: wrap row;
+    /* margin-left: 10%; */
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+/* 畫線 */
+.registerText:nth-child(2):after{
+    content:" ";
+    display:block; 
+    width: 100%;
+    height: 3px;
+    background-color:rgb(30, 30, 30);
+    transition: .4s .2s;
+}
+.registerClose{
+    width: 20%;
+    height: 100%;
+    background-image: url('./icon/close.svg');
+    background-size: 70% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* 內容 */
+.registerContent{
+    width: 100%;
+    height: 85%;
+    /* background-color: rgb(242, 255, 0); */
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-flow: wrap row;
+    box-sizing: border-box;
+    padding: 10% 0;
+}
+.registerInput{
+    width: 80%;
+    height: 15%;
+    /* background-color: rgb(0, 255, 140); */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid rgb(30,30,30);
+    font-family: 'Poppins',  'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 5%;
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+
+/* 驗證 */
+/* .valid{
+    border: 1px solid rgb(74, 255, 86);
+}
+.invalid{
+    border: 1px solid rgb(255, 74, 74);
+} */
+
+/* .registerContent>input:invalid{
+    border: 1px solid rgb(255, 74, 74);
+} */
+.registerInput:focus{
+    outline: none;
+}
+.registerInput:nth-child(1){
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+}
+/* 會員條件 勾選 */
+.registerInput:nth-child(4){
+    height: 5%;
+    border: 0px ;
+    padding-left: 0%;
+    justify-content: flex-start;
+}
+/* sign up */
+.registerInput:nth-child(5){
+    padding-left: 0%;
+    padding-right: 0%;
+    cursor: pointer;
+}
+.registerInput::placeholder{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(200,200,200);
+}
+.registerContent>button{
+    background-color:  rgb(30,30,30);
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2%;
+}
+
+/* 會員登入 */
+.signin{
+    position: fixed;
+    z-index: 999;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,.8);
+    display: none;
+}
+.signinBlock{
+    position: absolute;
+    left: 35vw;
+    top: 20vh;
+    width: 30vw;
+    height: 60vh;
+    background-color: white;
+    border: 1px solid rgba(30,30,30);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+.signinTitle{
+    width: 100%;
+    height: 20%;
+    /* background-color: rgb(0, 255, 255); */
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(30,30,30);
+    padding-left: 10%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.signinText{
+    height: 30%;
+    /* background-color: aquamarine; */
+    letter-spacing: 2%;
+    font-family:'Poppins',  'Noto Sans TC', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    flex-flow: wrap row;
+    /* margin-left: 10%; */
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+/* 畫線 */
+.signinText:nth-child(1):after{
+    content:" ";
+    display:block; 
+    width: 100%;
+    height: 3px;
+    background-color:rgb(30, 30, 30);
+    transition: .4s .2s;
+}
+.signinClose{
+    width: 20%;
+    height: 100%;
+    background-image: url('./icon/close.svg');
+    background-size: 70% auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/* 內容 */
+.signinContent{
+    width: 100%;
+    height: 80%;
+    /* background-color: rgb(242, 255, 0); */
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-flow: wrap row;
+    box-sizing: border-box;
+    padding: 10% 0;
+}
+.signinInput{
+    width: 80%;
+    height: 25%;
+    /* background-color: rgb(0, 255, 140); */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid rgb(30,30,30);
+    font-family: 'Poppins',  'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 5%;
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+.signinInput:focus{
+    outline: none;
+}
+.signinInput:nth-child(1){
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+}
+/* 會員登入 */
+.signinInput:nth-child(3){
+    padding-left: 0%;
+    padding-right: 0%;
+    cursor: pointer;
+}
+.signinInput::placeholder{
+    font-family: 'Poppins';
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(200,200,200);
+}
+.signinContent>button{
+    background-color:  rgb(30,30,30);
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2%;
+}
+
+
+/* top */
+.topBtn>a{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color:rgb(30, 30, 30);
+    z-index: 501;
+    bottom: 20px;
+    right: 20px;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: ease-in-out 5s 1s;
+    background-image: url('./icon/top_w.svg');
+    background-size: auto 100%;
+}
+
+/* 導覽列 ---------------------------------------------------------------------- */
+.navbar{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(70, 70, 70);
+    position:fixed;
+    z-index: 500;
+    top:0;
+    width: 100vw;
+    height: 120px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    transition-duration: .8s; 
+}
+.navbarL{
+    display: flex;
+    margin-left: 3vw;
+}
+.navbarLogo>a{
+    font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color:rgb(30, 30, 30);
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbarR{
+    display: flex;
+    margin-right: 3vw;
+    /* background-color: aqua; */
+    align-items: center;
+}
+.navbarText>a{
+    text-decoration: none;
+    color:rgb(30, 30, 30);
+
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: flex-start;
+    margin: 1vw;
+
+    font-size: .9rem;
+    font-family: 'Poppins',  'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+}
+.search input{
+    /* background-color: bisque; */
+    width: 30px;
+    height: 30px;
+    margin: 1vw;
+    background-image: url('./icon/search_2px.svg');
+    background-size: auto 95%;
+    background-repeat: no-repeat;
+    background-position: 95%;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 20px;
+    transition: .3s;
+    padding-left: 15px;
+    padding-right: 40px;
+    overflow: hidden;
+    font-size: .9rem;
+    font-family: 'Poppins',  'Noto Sans TC', sans-serif;
+    font-weight: 400;
+}
+.search input:hover{
+    width: 150px;
+}
+.search input:focus{
+    width: 150px;
+    outline: none;
+}
+/* 選項 畫線 */
+.navbarText>a::after{
+    content:" ";
+    display:block; 
+    width: 0%;
+    height: 3px;
+    background-color:rgb(30, 30, 30);
+    transition: .4s .2s;
+}
+.navbarText>a:hover::after{
+    width:100%;
+}
+.navbarImg{
+    background-image: url('./icon/user.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin: .3vw;
+    cursor: pointer;
+}
+.navbarSave{
+    background-image: url('./icon/save_navbar.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    margin: .3vw;
+    cursor: pointer;
+}
+
+
+/* 中間 ---------------------------------------------------------------------- */
+.content{
+    display: flex;
+    background-color: rgba(149, 255, 0,0);
+    margin-top: 120px; /* navbar height */
+    width: 100vw;
+    justify-content: center;
+    /* justify-content: flex-start; */
+    flex-flow: wrap row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+/* 1. 關於 about -------------------------------------------------------------------------------- */
+.about{
+    display: flex;
+    background-color: rgba(255, 0, 0, 0);
+    width: 94vw;
+    height: 200px;
+    margin-top:150px;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}
+.aboutText{
+    display: flex;
+    font-family:'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color:rgb(30, 30, 30);
+    background-color: rgba(0, 255, 255,0);
+    line-height:5rem;
+    
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; /*行數*/
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    
+}
+
+.aboutEnter button{
+    background-color: rgba(255, 255, 255,0);
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    
+    display: flex;
+    font-family:'Poppins', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    color:rgb(30, 30, 30);
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+    transition: .5s;
+    cursor: pointer;
+}
+.aboutEnter>a{
+    text-decoration: none;
+}
+
+/* 2. 輪播 carousel ----------------------------------- */
+
+/* Img */
+.carousel{
+    width: 100vw;
+    height: 600px;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(70, 70, 70);
+    
+}
+.carouselI{
+    display: flex;
+    background-color: rgb(255, 255, 255,0);
+    width: 100vw;
+    height: 500px;
+    position: relative;
+}
+.carouselImg{
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(37, 112, 49,0);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background-position:50% 70%;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    border-top: 1px solid rgb(70, 70, 70);
+    position: absolute;
+    visibility:hidden;
+}
+#imgOne{
+    background-image: url('./img/幼兒園_ref9.jpg');
+}
+#imgTwo{
+    background-image: url('./img/幼兒園_ref7.jpg');
+}
+#imgThree{
+    background-image: url('./img/幼兒園_ref8.jpg');
+}
+/* 控制 */
+.carouselcontrol{
+    background-color: rgb(255, 255, 255);
+    width: 94vw;
+    height: 50px;
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+/* 敘述 */
+.carouselL{
+    display: flex;
+    align-items: center;
+}
+.imgText{
+    font-size: .9rem;
+    font-family: 'Poppins','Noto Sans TC', sans-serif;
+    letter-spacing: .8px; 
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1; /*行數*/
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    position: absolute;
+    /* width: 40vw; */
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+/* 敘述 畫線 */
+.imgText::after{
+    content:" ";
+    display:block; 
+    width: 0%;
+    height: 3px;
+    background-color: rgb(30, 30, 30);
+    transition: 1s .2s;
+}
+.imgText:hover::after{
+    width:100%;
+}
+/* 按鈕 */
+.carouselR{
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 15vw;
+}
+.leftControl{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-position:50% 50%;
+    background-size: 100%;
+    background-image: url('./icon/imgControl_l_w.png');
+    background-repeat: no-repeat;
+    transition: .5s;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+.leftControl:hover{
+    background-image: url('./icon/imgControl_l_b.png');
+}
+.rightControl{
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    background-position:50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('./icon/imgControl_r_w.png');
+    transition: .5s;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+.rightControl:hover{
+    background-image: url('./icon/imgControl_r_b.png');
+}
+.imgNum{
+    font-family:  'Poppins', sans-serif;
+    letter-spacing: 10px;
+    font-size: .9rem;
+    margin-left: 6.3vw;
+    display: flex;
+    position: absolute;
+    background-color: rgb(169, 40, 40,0);
+    z-index: 5;
+}
+
+
+/* 3. 公告 ------------------------------------------- */
+.announcement{
+    height: 500px;
+    width: 100vw;
+    /* background-color: rgba(127, 255, 212,1); */
+    display: flex;
+    flex-flow: wrap row;
+    align-content: flex-end;
+    justify-content: center;
+    /* margin-bottom: 20vh; */
+    position: relative;
+}
+.announcementText{
+    display: flex;
+    font-family:'Poppins', sans-serif;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: rgb(30, 30, 30);
+    line-height:5.5rem;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    position: relative;
+    --ease-out-cubic: cubic-bezier(.33, 1, .68, 0);
+}
+.announcementEnter button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    font-family:'Poppins', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgb(30, 30, 30);
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    cursor: pointer;
+}
+.announcementEnter button:hover{
+    background-color:rgb(30, 30, 30);
+    color: white;
+}
+
+
+/* 4. 活動 activity ----------------------------------- */
+.titleText{
+    margin-top: 200px;
+    width: 100vw;
+    height: 200px;
+    padding-left: 3vw;
+    box-sizing: border-box;
+    /* background-color: rgb(255, 192, 192); */
+    display: flex;
+    align-items: center;
+    flex-flow: wrap row;
+    /* border-top: 1px solid rgb(30,30,30); */
+}
+.titleText>div{
+    /* width: 100%; */
+    font-family: 'Poppins';
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 500;
+    color: rgb(30,30,30);
+    /* background-color: antiquewhite; */
+}
+.activity{
+    width: 100vw;
+    height: 500px;
+    background-color:rgba(161, 65, 65,0) ;
+    display: flex;
+    flex-flow: wrap row;
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid rgb(30, 30, 30);
+    overflow: hidden;
+}
+.activityTitle{
+    width: 94vw;
+    height: 150px;
+    background-color: rgba(0, 255, 255,0);
+    margin-left: 3vw;
+    margin-top: 100px;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+/* 相簿 */
+.activityA{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(136, 74, 74,0);
+    height: 500px;
+    width: 33.333333333vw;
+    overflow: hidden;
+    border-top: 1px solid rgb(70, 70, 70);
+    
+}
+.activityAlbum{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    display: flex;
+    background-position:50% 70%;
+    background-size:  110% auto; 
+    background-repeat: no-repeat;
+    transition: .5s;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    cursor: pointer;
+}
+.albumInside{
+    background-size:  115% auto; 
+}
+
+#albumOne{
+    background-image: url('./img/activity1.jpg');
+
+}
+#albumTwo{
+    background-image: url('./img/activity4.jpg');
+    border-left: 1px solid rgb(70, 70, 70);
+    
+}
+#albumThree{
+    background-image: url('./img/activity5.jpg');
+    border-left: 1px solid rgb(70, 70, 70);
+    
+}
+/* 相簿名稱 */
+.activityText{
+    font-family:'Poppins', sans-serif;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: nowrap row;
+    height: 30%;
+    width: 33.33vw;
+    background-color: rgb(135, 179, 179,0);
+    transition: .5s;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    box-sizing: border-box;
+    color: rgb(30, 30, 30);
+}
+.textActivity{
+    background-color: rgba(77, 77, 77,0);
+    font-family:'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.textActivityLine{
+    content:" ";
+    display:block; 
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    transition: .4s .2s;
+    width: 0%;
+    transition: .4s .2s;
+}
+#textAlbumY{
+    border-left: 1px solid rgb(70, 70, 70);
+}
+#textAlbumN{
+    border-left: 1px solid rgb(70, 70, 70);
+}
+/* 按鈕 */
+.activityBtn{
+    
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 30px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    font-family:'Poppins', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgb(30, 30, 30);
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/* 5. 文章 ----------------------------------- */
+
+.artical{
+    /* margin-top: 300px; */
+    /* margin-bottom: 300px; */
+    width: 100vw;
+    height: 900px;
+    background-color: rgba(0, 0, 255,0);
+    border-bottom: 1px solid rgb(70, 70, 70);
+    display: flex;
+    flex-flow: nowrap column;
+}
+.articalTit{
+    width: 100vw;
+    height: 6rem;
+    margin-top: 200px;
+    padding-left: 3vw;
+    background-color: rgba(255, 0, 0,0);
+    display: flex;
+    align-content: flex-end;
+    font-family:'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(30, 30, 30);
+    line-height:5rem;
+    
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; /*行數*/
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+/* img */
+.articalDiv{
+    width: 100vw;
+    height: 300px;
+    background-color: rgb(255, 255, 255,0);
+    display: flex;
+    flex-flow: wrap row;
+    /* margin-bottom: 10px; */
+    border-top: 1px solid rgb(70, 70, 70);
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    padding: auto;
+}
+.articalDivL{
+    width: 30vw;
+    height: 300px;
+    background-color: rgb(30, 30, 30,0);
+    font-family:'Poppins', sans-serif;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.articalImg{
+    width: 80%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    background-size: 100% auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.articalOne{
+    background-image: url('./img/artical1.jpg');
+}
+.articalTwo{
+    background-image: url('./img/artical2.jpg');
+}
+.articalThree{
+    background-image: url('./img/artical3.jpg');
+}
+/* 敘述 */
+.articalDivM{
+    width: 50vw;
+    height: 300px;
+    /* background-color: rgba(191, 255, 0,1); */
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+.articalTitle{
+    margin: auto 0px 0px 5vw;
+    background-color: rgb(95, 129, 129,0);
+    display: flex;
+    align-items: flex-end;
+    justify-items: center;
+    color: rgb(30, 30, 30);
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family:'Poppins', sans-serif;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.articalLine{
+    margin-left: 5vw;
+    background-color: rgba(250, 235, 215,0);
+    content:" ";
+    display:block; 
+    height: 3px;
+    background-color:rgb(30, 30, 30);
+    transition: 1s .2s;
+    width: 0%;
+
+}
+.articalContent{
+    color: rgb(70, 70, 70);
+    margin: auto 0px auto 5vw;
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0,0);
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+    font-family:'Poppins', sans-serif;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+        
+}
+
+/* btn */
+.articalDivR{
+    width: 20vw;
+    height: 300px;
+    /* background-color: rgba(168, 24, 139,1); */
+    position: relative;
+}
+.articalSave{
+    position: absolute;
+    top: 3.5em;
+    right: 3.3vw;
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url('./icon/save.svg');
+    cursor: pointer;
+}
+.articalSaveClick{
+    background-image: url('./icon/saving.svg');
+}
+.articalBtn{
+    position: absolute;
+    bottom: 3.6em;
+    right: 3vw;
+    
+}
+.articalBtn>a{
+    width: 100px;
+    height: 5vh;
+    border: 1px solid rgb(30, 30, 30);
+    border-radius: 30px;
+    /* background-color: rgb(30, 30, 30); */
+    cursor: pointer;
+    display: flex;
+    font-family:'Poppins', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .5s .2s;
+    color: rgba(30,30,30);
+}
+
+
+
+
+
+
+
+
+/* 6. 聯絡 contact ----------------------------------- */
+.contact{
+    background-color: rgba(255, 0, 174,0);
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: space-between;
+    align-content: space-between;
+    position: relative;
+    border-top: 1px solid rgb(70, 70, 70);
+    border-bottom:1px rgb(70, 70, 70) solid;
+    overflow: hidden;
+}
+
+.contactTit{
+    padding-left: 3vw;
+    width: 100vw;
+    height: 300px;
+    background-color: rgba(250, 235, 215,0);
+    border-bottom: 1px solid rgb(70, 70, 70);
+}
+
+
+/* 地圖 */
+.contactSchool{
+    width: 50vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0,1);
+    overflow: hidden;
+    position: absolute;
+    border-right: 1px rgb(70, 70, 70) solid;
+}
+iframe{
+    position: absolute;
+    
+}
+/* 切換學校 */
+.contactBtn{
+    background-color: rgba(255, 213, 0,0);
+    border-left: 1px solid rgb(70, 70, 70);
+    height:60%;
+    width: 50vw;
+    margin-left: 50vw;
+    display: flex;
+    flex-flow: nowrap column;
+    position: relative;
+}
+.contactBtn button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    justify-items: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+    padding-left: 5vw;
+    display: flex;
+    flex-flow: nowrap row;
+    font-family:'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    transition: .7s;
+    position: relative;
+}
+#btnD{
+    border-bottom: 1px rgb(70, 70, 70) solid;
+    z-index: 200;
+    color: rgb(30, 30, 30);
+}
+#btnY{
+    border-bottom: 1px rgb(70, 70, 70) solid;
+    height: 30px;
+    z-index: 100;
+}
+#btnN{
+    border-bottom: 1px rgb(70, 70, 70) solid;
+    height: 30px;
+    z-index: 1;
+}
+
+/* 學校敘述 */
+.contactT{
+    width: 50vw;
+    height: 240px;
+    background-color: rgba(182, 31, 31,0);
+    margin-top: 160px;
+    margin-left: 50vw;
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+}
+.contactText{
+    width: 40vw;
+    height: 40px;
+    background-color: rgba(119, 255, 0,0);
+    display: flex;
+    align-items: flex-start;
+    font-family:'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    /* margin-top: 10px; */
+    margin-left: 5vw;
+    color: rgb(30, 30, 30);
+    
+}
+
+.textTitle{
+    background-color: rgba(0, 255, 255,0);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: .7px;
+}
+.textContent{
+    background-color: rgba(255, 228, 196,0);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+/* 尾端 footer ---------------------------------------------------------------------- */
+.footer{
+    background-color: rgb(30, 30, 30);
+    width:100vw;
+    height: 70px;
+    display: flex;
+    flex-flow: column ;
+    align-items:center;
+    align-content:center;
+    justify-content: center;
+    transition-duration: 2s; 
+}
+/* 
+.footerM{
+    width: 60vw;
+    height: 200px;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.footerMnav{
+    display: flex;
+    align-items: center;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    width: 60vw;
+    height: 45px;
+}
+.footerTitle{
+    width: 10vw;
+}
+.footerTitle>a{
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+    font-family:'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+.footerText{
+    width: 10vw;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+.footerText>a{
+    text-decoration: none;
+    color: rgb(175, 175, 175);
+    font-family:'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+} */
+
+.footerB{
+    width: 94vw;
+    height: 50px;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    font-family:'Poppins', sans-serif;
+    font-size: .4rem;
+    font-weight: 300;
+    color: rgb(175, 175, 175);
+    letter-spacing: .3px;
+}
+.footerBL{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.footerBR{
+    width: 10%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
